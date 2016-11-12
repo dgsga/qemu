@@ -86,6 +86,18 @@ typedef struct Core99MachineState {
     uint8_t via_config;
 } Core99MachineState;
 
+/* Screamer */
+#define TYPE_SCREAMER "screamer"
+#define SCREAMER(obj) OBJECT_CHECK(ScreamerState, (obj), TYPE_SCREAMER)
+
+typedef struct ScreamerState {
+    /*< private >*/
+    SysBusDevice parent_obj;
+    /*< public >*/
+    MemoryRegion mem;
+    qemu_irq irq;
+} ScreamerState;
+
 /* MacIO */
 #define TYPE_MACIO_IDE "macio-ide"
 #define MACIO_IDE(obj) OBJECT_CHECK(MACIOIDEState, (obj), TYPE_MACIO_IDE)
