@@ -84,6 +84,7 @@ config MAC_OLDWORLD
     select GRACKLE_PCI
     select HEATHROW_PIC
     select MACIO
+    select SCREAMER
 
 config MAC_NEWWORLD
     bool
@@ -95,6 +96,7 @@ config MAC_NEWWORLD
     select MACIO_GPIO
     select MAC_PMU
     select UNIN_PCI
+    select SCREAMER
 
 config E500
     bool
